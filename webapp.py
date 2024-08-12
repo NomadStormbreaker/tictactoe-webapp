@@ -15,7 +15,7 @@ def index():
 
 @app.route('/download')
 def download():
-    file_name = 'tictactoe-executable.zip'
+    file_name = 'tictactoe-executable.exe'
     file_path = os.path.join('/tmp', file_name)
 
     s3_client.download_file(S3_BUCKET, file_name, file_path)
